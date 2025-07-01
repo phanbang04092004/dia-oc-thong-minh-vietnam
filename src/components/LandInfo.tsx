@@ -20,7 +20,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
       <Card className="shadow-md bg-white">
         <CardHeader className="bg-blue-600 text-white rounded-t-lg">
           <CardTitle className="flex items-center gap-2">
-            🏠 Thông Tin Lô Đất
+            Thông Tin Lô Đất
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6 space-y-6">
@@ -68,7 +68,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
           <div>
             <h3 className="font-semibold text-gray-800 mb-2">Thông tin pháp lý</h3>
             <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
-              ✓ {data.legal_status}
+              {data.legal_status}
             </Badge>
           </div>
 
@@ -115,7 +115,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
       <Card className="shadow-md bg-white">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-gray-800">
-            🗺️ Vị trí trên bản đồ
+            Vị trí trên bản đồ
           </CardTitle>
         </CardHeader>
         <CardContent className="p-0">

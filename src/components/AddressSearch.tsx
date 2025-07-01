@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import { Search, MapPin, RotateCcw } from 'lucide-react';
+import { Search, RotateCcw } from 'lucide-react';
 
 interface AddressSearchProps {
   onSearch: (address: string) => void;
@@ -38,13 +38,12 @@ const AddressSearch: React.FC<AddressSearchProps> = ({
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1 relative">
-            <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <Input
               type="text"
               placeholder="Nhập địa chỉ lô đất (VD: 123 Nguyễn Văn Cừ, Quận 5, TP.HCM)"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              className="pl-10 h-12 text-base border-gray-300"
+              className="h-12 text-base border-gray-300"
               disabled={isLoading}
             />
           </div>

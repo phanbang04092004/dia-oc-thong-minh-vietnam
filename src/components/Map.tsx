@@ -7,8 +7,6 @@ interface MapProps {
 }
 
 const Map: React.FC<MapProps> = ({ center, address }) => {
-  // This is a placeholder for the map component
-  // In a real application, you would integrate with Google Maps, Leaflet, or similar
   return (
     <div className="h-64 bg-gradient-to-br from-gray-100 to-blue-100 rounded-b-lg flex items-center justify-center relative overflow-hidden">
       {/* Decorative grid pattern */}
@@ -22,7 +20,9 @@ const Map: React.FC<MapProps> = ({ center, address }) => {
       
       {/* Map placeholder content */}
       <div className="text-center z-10">
-        <div className="text-4xl mb-2">📍</div>
+        <div className="w-4 h-4 bg-red-500 rounded-full mx-auto mb-2 relative">
+          <div className="absolute -top-2 -left-2 w-8 h-8 bg-red-500 opacity-30 rounded-full animate-ping"></div>
+        </div>
         <p className="text-gray-700 font-medium mb-1">Vị trí lô đất</p>
         <p className="text-sm text-gray-600 max-w-xs">
           {address}

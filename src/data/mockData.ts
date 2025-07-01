@@ -33,6 +33,20 @@ export const landDataMap: Record<string, {land: LandData, price: PriceData}> = {
       total_estimated_price: 8120000000,
       liquidity_days: 45,
       average_area_price: 92000000,
+      price_trend: [
+        { month: "01/2024", price: 85000000 },
+        { month: "02/2024", price: 87000000 },
+        { month: "03/2024", price: 88000000 },
+        { month: "04/2024", price: 89000000 },
+        { month: "05/2024", price: 90000000 },
+        { month: "06/2024", price: 91000000 },
+        { month: "07/2024", price: 92000000 },
+        { month: "08/2024", price: 93000000 },
+        { month: "09/2024", price: 94000000 },
+        { month: "10/2024", price: 95000000 },
+        { month: "11/2024", price: 96000000 },
+        { month: "12/2024", price: 95000000 }
+      ],
       nearby_transactions: [
         {
           address: "119 Nguyễn Văn Cừ, Phường 4, Quận 5",
@@ -90,6 +104,20 @@ export const landDataMap: Record<string, {land: LandData, price: PriceData}> = {
       total_estimated_price: 18000000000,
       liquidity_days: 30,
       average_area_price: 145000000,
+      price_trend: [
+        { month: "01/2024", price: 135000000 },
+        { month: "02/2024", price: 138000000 },
+        { month: "03/2024", price: 140000000 },
+        { month: "04/2024", price: 142000000 },
+        { month: "05/2024", price: 144000000 },
+        { month: "06/2024", price: 146000000 },
+        { month: "07/2024", price: 147000000 },
+        { month: "08/2024", price: 148000000 },
+        { month: "09/2024", price: 149000000 },
+        { month: "10/2024", price: 150000000 },
+        { month: "11/2024", price: 151000000 },
+        { month: "12/2024", price: 150000000 }
+      ],
       nearby_transactions: [
         {
           address: "450 Lê Duẩn, Phường Bến Nghé, Quận 1",
@@ -147,6 +175,20 @@ export const landDataMap: Record<string, {land: LandData, price: PriceData}> = {
       total_estimated_price: 10538000000,
       liquidity_days: 35,
       average_area_price: 108000000,
+      price_trend: [
+        { month: "01/2024", price: 102000000 },
+        { month: "02/2024", price: 103000000 },
+        { month: "03/2024", price: 104000000 },
+        { month: "04/2024", price: 105000000 },
+        { month: "05/2024", price: 106000000 },
+        { month: "06/2024", price: 107000000 },
+        { month: "07/2024", price: 108000000 },
+        { month: "08/2024", price: 109000000 },
+        { month: "09/2024", price: 110000000 },
+        { month: "10/2024", price: 111000000 },
+        { month: "11/2024", price: 112000000 },
+        { month: "12/2024", price: 110000000 }
+      ],
       nearby_transactions: [
         {
           address: "785 Hoàng Văn Thụ, Phường 4, Quận Tân Bình",

@@ -31,6 +31,10 @@ export interface PriceData {
   total_estimated_price: number;
   liquidity_days: number;
   average_area_price: number;
+  price_trend: Array<{
+    month: string;
+    price: number;
+  }>;
   nearby_transactions: Array<{
     address: string;
     date: string;
@@ -84,7 +88,7 @@ const Index = () => {
           <div className="mt-8">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                🗺️ Chọn vị trí trên bản đồ
+                Chọn vị trí trên bản đồ
               </h2>
               <Map 
                 center={[10.7769, 106.7009]} 
