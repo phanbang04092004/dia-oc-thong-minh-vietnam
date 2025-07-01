@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import AddressSearch from '../components/AddressSearch';
 import LandInfo from '../components/LandInfo';
 import PriceAnalysis from '../components/PriceAnalysis';
-import { landData, priceData } from '../data/mockData';
+import Map from '../components/Map';
+import { getDataByAddress } from '../data/mockData';
 
 export interface LandData {
   address: string;
@@ -47,10 +48,8 @@ const Index = () => {
     setIsLoading(true);
     // Simulate API call
     setTimeout(() => {
-      setSearchResult({
-        land: landData,
-        price: priceData
-      });
+      const result = getDataByAddress(address);
+      setSearchResult(result);
       setIsLoading(false);
     }, 1500);
   };
@@ -60,7 +59,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -79,6 +78,21 @@ const Index = () => {
           isLoading={isLoading}
           hasResult={!!searchResult}
         />
+
+        {/* Map Section - Show when no results */}
+        {!searchResult && (
+          <div className="mt-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                🗺️ Chọn vị trí trên bản đồ
+              </h2>
+              <Map 
+                center={[10.7769, 106.7009]} 
+                address="TP.HCM"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Results Section */}
         {searchResult && (

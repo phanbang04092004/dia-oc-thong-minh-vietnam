@@ -17,8 +17,8 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
 
   return (
     <div className="space-y-6">
-      <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
+      <Card className="shadow-md bg-white">
+        <CardHeader className="bg-blue-600 text-white rounded-t-lg">
           <CardTitle className="flex items-center gap-2">
             🏠 Thông Tin Lô Đất
           </CardTitle>
@@ -40,7 +40,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-1">Diện tích</h3>
-                <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
+                <Badge className="bg-gray-100 text-gray-800 hover:bg-gray-100">
                   {formatArea(data.area)}
                 </Badge>
               </div>
@@ -49,7 +49,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <h3 className="font-semibold text-gray-800 mb-1">Hướng cửa chính</h3>
-                <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-100">
+                <Badge className="bg-gray-100 text-gray-800 hover:bg-gray-100">
                   {data.door_orientation}
                 </Badge>
               </div>
@@ -67,7 +67,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
           {/* Legal Status */}
           <div>
             <h3 className="font-semibold text-gray-800 mb-2">Thông tin pháp lý</h3>
-            <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
+            <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
               ✓ {data.legal_status}
             </Badge>
           </div>
@@ -100,7 +100,7 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
                 <span className="text-gray-600 block mb-2">Tiện ích xung quanh:</span>
                 <div className="flex flex-wrap gap-1">
                   {data.additional_info.nearby_facilities.map((facility, index) => (
-                    <Badge key={index} variant="outline" className="text-xs">
+                    <Badge key={index} variant="outline" className="text-xs border-gray-300">
                       {facility}
                     </Badge>
                   ))}
@@ -112,9 +112,9 @@ const LandInfo: React.FC<LandInfoProps> = ({ data }) => {
       </Card>
 
       {/* Map */}
-      <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
+      <Card className="shadow-md bg-white">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-gray-800">
             🗺️ Vị trí trên bản đồ
           </CardTitle>
         </CardHeader>

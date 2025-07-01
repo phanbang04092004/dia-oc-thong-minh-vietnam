@@ -34,7 +34,7 @@ const AddressSearch: React.FC<AddressSearchProps> = ({
   ];
 
   return (
-    <Card className="p-6 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
+    <Card className="p-6 shadow-md bg-white">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1 relative">
@@ -44,7 +44,7 @@ const AddressSearch: React.FC<AddressSearchProps> = ({
               placeholder="Nhập địa chỉ lô đất (VD: 123 Nguyễn Văn Cừ, Quận 5, TP.HCM)"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              className="pl-10 h-12 text-base"
+              className="pl-10 h-12 text-base border-gray-300"
               disabled={isLoading}
             />
           </div>
@@ -52,7 +52,7 @@ const AddressSearch: React.FC<AddressSearchProps> = ({
           <div className="flex gap-2">
             <Button 
               type="submit" 
-              className="h-12 px-8 bg-blue-600 hover:bg-blue-700"
+              className="h-12 px-8 bg-blue-600 hover:bg-blue-700 text-white"
               disabled={isLoading || !address.trim()}
             >
               {isLoading ? (
@@ -72,7 +72,7 @@ const AddressSearch: React.FC<AddressSearchProps> = ({
               <Button 
                 type="button" 
                 variant="outline"
-                className="h-12 px-6"
+                className="h-12 px-6 border-gray-300 text-gray-700 hover:bg-gray-50"
                 onClick={onReset}
               >
                 <RotateCcw className="h-4 w-4 mr-2" />
